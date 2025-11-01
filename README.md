@@ -357,7 +357,6 @@ docker run --rm --gpus all nvidia/cuda:12.0-base nvidia-smi
 - Stake HYPER tokens to increase priority
 - Improve uptime and job completion rate
 - Check node status on dashboard
-- Join Discord for support
 
 ### Out of Memory Errors
 
