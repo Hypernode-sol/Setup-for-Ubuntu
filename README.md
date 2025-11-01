@@ -357,7 +357,7 @@ docker run --rm --gpus all nvidia/cuda:12.0-base nvidia-smi
 - Stake HYPER tokens to increase priority
 - Improve uptime and job completion rate
 - Check node status on dashboard
-- Join Discord for support
+- Check GitHub Issues for troubleshooting
 
 ### Out of Memory Errors
 
@@ -391,9 +391,9 @@ nvidia-smi
 - [Automation Engine](https://github.com/Hypernode-sol/hypernode-automation-engine)
 
 ### Community
-- **Discord**: Join for support and announcements
 - **Twitter**: Follow for updates
 - **GitHub Discussions**: Ask technical questions
+- **Email**: contact@hypernodesolana.org
 
 ### Learning Resources
 - [Docker Documentation](https://docs.docker.com/)
@@ -477,8 +477,9 @@ nvidia-smi
 ### Support Channels
 
 - **GitHub Issues**: [Report bugs](https://github.com/Hypernode-sol/Hypernode-Site-App/issues)
-- **Discord**: Real-time community support
+- **GitHub Discussions**: Technical questions and support
 - **Twitter**: @hypernode_sol for announcements
+- **Email**: contact@hypernodesolana.org
 
 ---
 
