@@ -263,10 +263,10 @@ avm use latest
 anchor --version
 
 # Clone smart contracts
-git clone https://github.com/Hypernode-sol/hypernode-core-protocol.git
-cd hypernode-core-protocol
+git clone https://github.com/Hypernode-sol/hypernode-llm-deployer.git
+cd hypernode-llm-deployer
 
-# Build
+# Build programs
 anchor build
 
 # Test
@@ -293,6 +293,47 @@ pip install -r requirements.txt
 # Run tests
 python -m pytest
 ```
+
+### For Offchain Services (x402 Protocol & Oracle)
+
+```bash
+# Install Node.js 18+ (if not already installed)
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Clone smart contracts repository
+git clone https://github.com/Hypernode-sol/hypernode-llm-deployer.git
+cd hypernode-llm-deployer/offchain
+
+# Install dependencies
+npm install
+
+# Setup environment
+cp .env.example .env
+nano .env
+# Configure:
+# - FACILITATOR_PROGRAM_ID (deployed program ID)
+# - ORACLE_PRIVATE_KEY (generate with: solana-keygen new)
+# - HYPER_MINT_DEVNET (token mint address)
+# - SOLANA_RPC_URL (RPC endpoint)
+
+# Build
+npm run build
+
+# Start offchain services
+npm start
+
+# Server will run on http://localhost:3005
+# Services include:
+# - x402 Payment Protocol (HTTP 402)
+# - Oracle verification service
+# - Facilitator API endpoints
+```
+
+**Offchain Services Overview:**
+- **x402 Protocol**: HTTP 402 Payment Required for job submissions
+- **Oracle Service**: Trustless job verification with 6-check system
+- **Facilitator API**: REST endpoints for payment intents and job management
 
 ---
 
@@ -357,10 +398,7 @@ docker run --rm --gpus all nvidia/cuda:12.0-base nvidia-smi
 - Stake HYPER tokens to increase priority
 - Improve uptime and job completion rate
 - Check node status on dashboard
-<<<<<<< HEAD
 - Check GitHub Issues for troubleshooting
-=======
->>>>>>> 9752cdfa1ba3222967de151f5fc3feeee28012f6
 
 ### Out of Memory Errors
 
@@ -389,7 +427,7 @@ nvidia-smi
 
 ### Documentation
 - [Main Repository](https://github.com/Hypernode-sol/Hypernode-Site-App)
-- [Smart Contracts](https://github.com/Hypernode-sol/hypernode-core-protocol)
+- [Smart Contracts](https://github.com/Hypernode-sol/hypernode-llm-deployer)
 - [Node Client](https://github.com/Hypernode-sol/hypernode-node-client)
 - [Automation Engine](https://github.com/Hypernode-sol/hypernode-automation-engine)
 
@@ -512,6 +550,7 @@ Start earning HYPER tokens today by sharing your GPU power with the world.
 
 ---
 
-**Last Updated**: 2025-11-01
+**Last Updated**: 2025-11-09
 **Version**: 1.0.0
 **Maintained by**: Hypernode Solana Team
+
